@@ -1,4 +1,4 @@
-with open("input","r") as in_file:
+with open("input.txt","r") as in_file:
     maps = in_file.read().split("\n\n")
     seeds = [*map(int,maps[0].split(" ")[1:])]
     for n,map in enumerate(maps[1:]):
