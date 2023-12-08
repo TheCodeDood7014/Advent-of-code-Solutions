@@ -2,7 +2,7 @@ def find_range_overlap(x, y):
     return range(max(x[0], y[0]), min(x[-1], y[-1])+1)
 def snip_range(rangea, rangeb):
     return (range(rangea.start,rangeb.start),range(rangeb.stop, rangea.stop))
-with open("input","r") as in_file:
+with open("input.txt","r") as in_file:
     maps = in_file.read().split("\n\n")
     seeds = [*map(int, maps[0].split(" ")[1:])]
     seed_ranges = []
@@ -14,7 +14,7 @@ with open("input","r") as in_file:
 # At mapping source map the values (starting from Mapping destination) for Mapping Length values.
 for num_maps in range(1,8):
     # Make the ranges
-    print(num_maps)
+    # print(num_maps)
     ranges = []
     for i in maps[num_maps]:
         ranges.append((i[0], range(i[1],i[1]+i[2],1)))
@@ -46,7 +46,7 @@ for num_maps in range(1,8):
     seed_ranges = parsed
 
 # Now that we have a bunch of result ranges get the minimum now.
-print("Finding Minimum")
+# print("Finding Minimum")
 result = []
 for i in seed_ranges:
     result.append(i.start)
