@@ -62,7 +62,7 @@ for key,value in hands.items():
     value.reverse()
     joined += value
 _sum = 0
-print(hands)
+# print(hands)
 for count, hand in enumerate(reversed(joined)):
     # Rank = count + 1
     _sum += (count+1)*hand[1]
